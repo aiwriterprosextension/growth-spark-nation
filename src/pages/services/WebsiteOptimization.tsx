@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, TrendingUp, Clock, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import { RiskReversal } from "@/components/RiskReversal";
+import { TrustBadges } from "@/components/TrustBadges";
+import { AuditCTA } from "@/components/AuditCTA";
 
 const WebsiteOptimization = () => {
   const features = [
