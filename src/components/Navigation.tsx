@@ -17,11 +17,33 @@ export const Navigation = () => {
   }, []);
 
   const menuItems = [
-    { label: "Services", href: "#services" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Success Stories", href: "#testimonials" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" }
+    { label: "Home", href: "/" },
+    { 
+      label: "Services", 
+      href: "/services",
+      submenu: [
+        { label: "Complete Digital Marketing", href: "/services/complete-digital-marketing" },
+        { label: "Website Optimization", href: "/services/website-optimization" },
+        { label: "Social Media Management", href: "/services/social-media-management" },
+      ]
+    },
+    {
+      label: "Industries",
+      href: "/industries",
+      submenu: [
+        { label: "Law Firm Marketing", href: "/industries/law-firm-marketing" },
+        { label: "Healthcare Marketing", href: "/industries/healthcare-marketing" },
+        { label: "Real Estate Marketing", href: "/industries/real-estate-marketing" },
+        { label: "Restaurant Marketing", href: "/industries/restaurant-marketing" },
+        { label: "Contractor Marketing", href: "/industries/contractor-marketing" },
+        { label: "E-commerce Marketing", href: "/industries/ecommerce-marketing" },
+        { label: "Financial Services Marketing", href: "/industries/financial-services-marketing" },
+      ]
+    },
+    { label: "Resources", href: "/resources" },
+    { label: "Blog", href: "/blog" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" }
   ];
 
   return (
@@ -45,13 +67,33 @@ export const Navigation = () => {
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-8">
               {menuItems.map((item) => (
-                <a 
-                  key={item.label}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {item.label}
-                </a>
+                <div key={item.label} className="relative group">
+                  <Link 
+                    to={item.href}
+                    className={`text-foreground hover:text-primary transition-colors font-medium ${
+                      location.pathname === item.href ? 'text-primary' : ''
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                  {item.submenu && (
+                    <div className="absolute left-0 top-full mt-2 w-64 bg-background shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="py-2">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            to={subItem.href}
+                            className={`block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground ${
+                              location.pathname === subItem.href ? 'bg-accent/50' : ''
+                            }`}
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
             
@@ -83,14 +125,33 @@ export const Navigation = () => {
             <div className="container mx-auto px-6 py-6">
               <div className="flex flex-col gap-6">
                 {menuItems.map((item) => (
-                  <a 
-                    key={item.label}
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </a>
+                  <div key={item.label}>
+                    <Link 
+                      to={item.href}
+                      className={`text-foreground hover:text-primary transition-colors font-medium ${
+                        location.pathname === item.href ? 'text-primary' : ''
+                      }`}
+                      onClick={() => !item.submenu && setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                    {item.submenu && (
+                      <div className="ml-4 mt-2 flex flex-col gap-2">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            to={subItem.href}
+                            className={`text-sm text-foreground hover:text-primary transition-colors ${
+                              location.pathname === subItem.href ? 'text-primary' : ''
+                            }`}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
                 <div className="flex flex-col gap-4 pt-4 border-t border-border">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
