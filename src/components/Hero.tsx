@@ -19,6 +19,7 @@ export const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         {/* Trust Badge */}
+        {/* Trust Badge */}
         <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8 fade-in">
           <Users className="w-4 h-4 text-accent" />
           <span className="text-sm font-medium text-white">Join 500+ Small Businesses Growing with JLawrence Marketing</span>
@@ -33,7 +34,7 @@ export const Hero = () => {
         
         {/* Subheading */}
         <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-8 slide-up" style={{animationDelay: '0.2s'}}>
-          Automated SEO, social media, and website management that drives real results 
+          Automated SEO, social media, and website management that drives real results for businesses nationwide 
           for businesses nationwide. No long-term contracts, just measurable growth.
         </p>
         
