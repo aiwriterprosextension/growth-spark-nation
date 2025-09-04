@@ -1,29 +1,5 @@
-import { Navigation } from "@/components/Navigat                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent" />
-                    <span>Professional background in digital marketing</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent" />
-                    <span>Started in Baltimore, now serving nationwide</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent" />
-                    <span>Remote expertise, local results</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent" />
-                    <span>No long-term contracts required</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent" />
-                    <span>Results guaranteed or money back</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-4">Why Choose Us</h3>ton } from "@/components/ui/button";
+import { Navigation } from "@/components/Navigation";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, MapPin, Users, Award, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
