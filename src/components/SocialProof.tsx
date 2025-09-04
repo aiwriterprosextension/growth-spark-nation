@@ -31,20 +31,20 @@ const stats = [
   {
     icon: Users,
     value: "500+",
-    label: "Businesses Served",
+    label: "businesses served",
     sublabel: "Nationwide"
   },
   {
     icon: TrendingUp,
     value: "150%",
-    label: "Average Traffic Increase",
+    label: "average traffic increase",
     sublabel: "Within 6 months"
   },
   {
     icon: Star,
-    value: "4.9/5",
-    label: "Client Satisfaction",
-    sublabel: "Based on 200+ reviews"
+    value: "30+",
+    label: "industries helped",
+    sublabel: "From restaurants to law firms"
   },
   {
     icon: MapPin,
@@ -82,8 +82,8 @@ export const SocialProof = () => {
         {/* Testimonials Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Success Stories From 
-            <span className="block text-accent">Coast to Coast</span>
+            Trusted by Small Businesses 
+            <span className="block text-accent">Nationwide</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Real results from real businesses nationwide. See how our remote digital marketing solutions drive growth.

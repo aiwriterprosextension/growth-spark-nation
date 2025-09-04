@@ -21,7 +21,7 @@ export const Hero = () => {
         {/* Trust Badge */}
         <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-8 fade-in">
           <Users className="w-4 h-4 text-accent" />
-          <span className="text-sm font-medium text-white">Trusted by 500+ Small Businesses Nationwide</span>
+          <span className="text-sm font-medium text-white">Join 500+ Small Businesses Growing with JLawrence Marketing</span>
         </div>
         
         {/* Main Headline */}
@@ -55,13 +55,15 @@ export const Hero = () => {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 scale-in" style={{animationDelay: '0.6s'}}>
-          <Button className="btn-accent group">
-            Get Your Free Website Audit
-            <span className="text-xs block opacity-75">(Usually $200)</span>
+          <Button className="btn-accent group px-8 py-4 text-lg">
+            <div className="text-center">
+              <div className="font-bold">Get Your Free Website Audit</div>
+              <div className="text-xs opacity-75">(Usually $200)</div>
+            </div>
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="outline" className="btn-outline">
-            View Success Stories
+          <Button variant="outline" className="btn-outline px-8 py-4 text-lg">
+            See Our Case Studies
           </Button>
         </div>
         

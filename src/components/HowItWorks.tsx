@@ -4,19 +4,19 @@ const steps = [
   {
     icon: Search,
     title: "Analyze Your Online Presence",
-    description: "We conduct a comprehensive remote audit of your website, SEO, and social media via secure screen share consultation.",
+    description: "Complete website and social media audit via secure screen share",
     detail: "Complete technical analysis of your current digital footprint"
   },
   {
     icon: Cog,
     title: "Create Custom Solutions", 
-    description: "Our team implements automated systems and optimizations tailored to your business needs and industry.",
+    description: "Automated SEO, content, and social media strategies tailored to your business",
     detail: "Automated implementation while you focus on your business"
   },
   {
     icon: TrendingUp,
     title: "You Get More Customers",
-    description: "Watch your online visibility, traffic, and leads increase with our proven, measurable strategies.",
+    description: "Watch your traffic, leads, and revenue grow while you focus on your business",
     detail: "Average 150% traffic increase within 6 months"
   }
 ];
@@ -27,7 +27,7 @@ export const HowItWorks = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            How We Transform Your Business 
+            How We Transform Your Online Presence
             <span className="block text-accent">In 3 Simple Steps</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -76,15 +76,15 @@ export const HowItWorks = () => {
           
           {/* Call to Action */}
           <div className="text-center mt-16 p-8 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl border border-primary/10">
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <h3 className="text-2xl font-bold mb-4">Ready to Stop Losing Customers to Competitors?</h3>
             <p className="text-muted-foreground mb-6">
-              Join hundreds of businesses that have transformed their online presence with our proven system.
+              Get your free website audit and see exactly how to outrank your competition
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-accent">
-                Start Your Free Audit Today
+              <button className="btn-accent px-8 py-4 text-lg font-bold">
+                Start Getting More Customers Today
               </button>
-              <button className="btn-outline">
+              <button className="btn-outline px-8 py-4 text-lg">
                 Schedule Strategy Call
               </button>
             </div>

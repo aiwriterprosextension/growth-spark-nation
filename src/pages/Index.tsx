@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { HowItWorks } from "@/components/HowItWorks";
 import { SocialProof } from "@/components/SocialProof";
+import { StickyCTA } from "@/components/StickyCTA";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
+      <StickyCTA />
       <main>
         <Hero />
         <div id="services">
