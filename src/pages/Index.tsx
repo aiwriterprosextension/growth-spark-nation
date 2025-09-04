@@ -1,12 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
+import { Services } from "@/components/Services";
+import { HowItWorks } from "@/components/HowItWorks";
+import { SocialProof } from "@/components/SocialProof";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    // Show sticky CTA after 3 seconds
+    const timer = setTimeout(() => {
+      const stickyCta = document.querySelector('.sticky-cta');
+      if (stickyCta) {
+        stickyCta.classList.add('show');
+      }
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <main>
+        <Hero />
+        <div id="services">
+          <Services />
+        </div>
+        <div id="how-it-works">
+          <HowItWorks />
+        </div>
+        <div id="testimonials">
+          <SocialProof />
+        </div>
+      </main>
     </div>
   );
 };
